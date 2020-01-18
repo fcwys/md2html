@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/lei-md.css">
+    <link rel="stylesheet" href="css/hljs-github.css">
+    <link rel="stylesheet" href="css/highlight/styles/default.css">
+    <script src="js/Parser.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <title>Markdown在线解析</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 使用说明 -->
+        <div id="about" @click="hideAbout">
+            <div class="aboutInfo" @click="stopBubble(this.id)">
+                <h3>Markdown解析 - 使用说明</h3>
+                <div class="aboutContent">
+                    在地址后传入参数
+                    <span>index.html?url=md文件地址</span>
+                    即可,<br>
+                    如<br>
+                    <span>index.html?url=http://www.aaa.com/abc.md</span>
+                    <br>
+                    也可嵌入iframe使用
+                </div>
+            </div>
+        </div>
+
+        <!-- 头部 -->
+        <div id="header" class="header">文章：{{title}}</div>
+
+        <!-- 加载动画 -->
+        <div class="content">
+            <div class="load" :class="load?hide:show"><img src="css/load.svg" alt="Loading">
+                <p>加载中...</p>
+            </div>
+
+            <!-- 文章内容 -->
+            <article class="lei-md lei-md-auto-fix">
+                <p id="mainContent" :class="load?show:hide" v-html="htmlText"></p>
+            </article>
+        </div>
+
+        <!-- 脚部 -->
+        <div id="footer" class="footer">Copyright ©2020 Power by <a href="https://www.fcwys.cc/">风吹我已散</a></div>
+
+        <!-- 返回顶部或底部 -->
+        <a id="toTop" href="#header"><img src="css/top.png"></a>
+        <a id="aboutBtn" @click="showAbout"><img src="css/about.png"></a>
+        <a id="toBottom" href="#footer"><img src="css/top.png"></a>
+
+    </div>
+    <script src="js/index.js"></script>
+    <script src="css/highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+
+</html>

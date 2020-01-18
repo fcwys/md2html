@@ -1,0 +1,312 @@
+@font-face {
+  font-family: Chinese Quote;
+  src: local("PingFang SC"), local("SimSun");
+  unicode-range: U+2018, U+2019, U+201c, U+201d;
+}
+@font-face {
+  font-family: Tahoma For Number;
+  src: local("Tahoma");
+  unicode-range: U+30-39;
+}
+@font-face {
+  font-family: Chinese Quote;
+  src: local("PingFang SC"), local("SimSun");
+  unicode-range: U+2018, U+2019, U+201c, U+201d;
+}
+.lei-md {
+  font-feature-settings: "tnum";
+  font-variant: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 14px;
+  font-family: Tahoma For Number, Chinese Quote, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #262626;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  outline-style: none;
+  word-wrap: break-word;
+  -webkit-user-select: auto;
+  max-width: 752px;
+  padding: 0 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lei-md ::selection {
+  color: inherit;
+  background: rgba(27, 162, 227, 0.2);
+}
+.lei-md h1,
+.lei-md h2,
+.lei-md h3,
+.lei-md h4,
+.lei-md h5,
+.lei-md h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: normal;
+  color: #262626;
+  word-spacing: 1px;
+  font-weight: 700;
+}
+.lei-md h1 {
+  font-size: 28px;
+  line-height: 36px;
+  padding: 7px 0;
+}
+.lei-md h2 {
+  font-size: 24px;
+  line-height: 32px;
+  padding: 7px 0;
+}
+.lei-md h3 {
+  font-size: 20px;
+  line-height: 28px;
+  padding: 7px 0;
+}
+.lei-md h4 {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 7px 0;
+}
+.lei-md h5 {
+  font-size: 14px;
+  line-height: 24px;
+  padding: 7px 0;
+}
+.lei-md h6 {
+  font-size: 14px;
+  line-height: 24px;
+  padding: 7px 0;
+  font-weight: 400;
+}
+.lei-md p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  min-height: 24px;
+  line-height: 24px;
+  white-space: normal;
+  margin: 0;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+}
+.lei-md b,
+.lei-md strong {
+  font-weight: bolder;
+}
+.lei-md sup {
+  top: -0.5em;
+}
+.lei-md sub {
+  bottom: -0.25em;
+}
+.lei-md sup,
+.lei-md sub {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+.lei-md a {
+  color: #096dd9;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  -webkit-text-decoration-skip: objects;
+}
+.lei-md a,
+.lei-md a:active {
+  word-wrap: break-word;
+  color: #096dd9;
+}
+.lei-md a:hover {
+  color: #1890ff;
+}
+.lei-md img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+  border-radius: 2px 2px;
+  display: inline-block;
+  opacity: 1;
+  text-align: left;
+  transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+.lei-md pre {
+  border-radius: 0;
+  border-width: 0;
+  background: #f9f9f9;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: inherit;
+  color: inherit;
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-variant-ligatures: contextual;
+  font-variant-ligatures: contextual;
+  position: relative;
+  padding: 16px;
+  overflow: visible;
+  border: 1px solid #e8e8e8;
+  border-radius: 2px 2px;
+  text-indent: 0;
+  overflow-y: scroll;
+  overflow-x: visible;
+}
+.lei-md code {
+  font-family: monospace;
+  font-size: inherit;
+  background-color: rgba(0, 0, 0, 0.06);
+  padding: 0 2px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 2px 2px;
+  line-height: inherit;
+  word-wrap: break-word;
+  text-indent: 0;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+.lei-md pre code {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+  font-size: 13px;
+  line-height: 21px;
+  color: #595959;
+  direction: ltr;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.lei-md table {
+  position: relative;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  word-wrap: break-word;
+  word-break: normal;
+  margin: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  cursor: default;
+  width: 96%;
+}
+.lei-md tbody,
+.lei-md tr,
+.lei-md th,
+.lei-md td {
+  margin: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+.lei-md table tr td,
+.lei-md table tr th {
+  margin: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+  min-width: 90px;
+  font-size: 14px;
+  white-space: normal;
+  word-wrap: break-word;
+  border: 1px solid #d9d9d9;
+  vertical-align: top;
+  padding: 4px 8px;
+  cursor: default;
+}
+.lei-md th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+.lei-md ul,
+.lei-md ol {
+  margin: 0 0 0 3px;
+  padding: 0;
+  padding-left: 23px;
+}
+.lei-md li {
+  white-space: normal;
+  margin-left: 23px;
+}
+.lei-md > ul {
+  padding-left: 0;
+  list-style-type: disc;
+}
+.lei-md > ul > ul {
+  list-style-type: circle;
+}
+.lei-md > ul > ul > ul {
+  list-style-type: square;
+}
+.lei-md > ol {
+  padding-left: 0;
+  list-style-type: decimal;
+}
+.lei-md > ol > ol {
+  list-style-type: lower-alpha;
+}
+.lei-md > ol > ol > ol {
+  list-style-type: lower-roman;
+}
+.lei-md li,
+.lei-md li p,
+.lei-md li section,
+.lei-md li a,
+.lei-md li * {
+  font-size: 14px;
+}
+.lei-md hr {
+  box-sizing: border-box;
+  margin-top: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #e8e8e8;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0);
+  overflow: visible;
+}
+.lei-md blockquote {
+  margin: 0 0 1em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 1em;
+  margin-left: 0;
+  border-left: 3px solid #eee;
+  opacity: 0.6;
+}
+.lei-md.lei-md-auto-fix {
+  /* margin-top: 30px;
+  margin-bottom: 30px; */
+}
+.lei-md.lei-md-auto-fix > h1,
+.lei-md.lei-md-auto-fix > h2,
+.lei-md.lei-md-auto-fix > h3,
+.lei-md.lei-md-auto-fix > h4,
+.lei-md.lei-md-auto-fix > h5,
+.lei-md.lei-md-auto-fix > h6 {
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+.lei-md.lei-md-auto-fix > h1:first-child {
+  margin-top: 0;
+}
+.lei-md.lei-md-auto-fix > p,
+.lei-md.lei-md-auto-fix > ul,
+.lei-md.lei-md-auto-fix > ol,
+.lei-md.lei-md-auto-fix > table,
+.lei-md.lei-md-auto-fix > pre,
+.lei-md.lei-md-auto-fix > hr,
+.lei-md.lei-md-auto-fix > blockquote {
+  margin-bottom: 1.8em;
+}
