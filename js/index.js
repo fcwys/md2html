@@ -25,9 +25,12 @@
                 var url = "./README.md";
                 if (getUrl("url")) {
                     url = getUrl("url");
+                    //取url文件名
+                    let num = url.lastIndexOf('/') + 1
+                    var mdName = decodeURI(url.substring(num));
                     // console.log(url);
-                }else{
-                    console.log("URL为空")
+                } else {
+                    // console.log("URL为空")
                 };
                 axios.get(url)
                     .then(function (response) {
@@ -36,10 +39,10 @@
                         var parser = new HyperDown,
                             html = parser.makeHtml(response.data);
                         _this.load = true;
-                        _this.title = decodeURI(url);
+                        _this.title = mdName;
                         _this.htmlText = html;
-                        // console.log(_this.htmlText);
-
+                        //代码高亮渲染
+                        hljs.initHighlightingOnLoad();
                     })
                     .catch(function (error) {
                         // 请求失败处理
@@ -48,20 +51,19 @@
             },
             methods: {
                 //显示隐藏关于信息
-                showAbout: function() {
-                    document.getElementById("about").style.display="block";
+                showAbout: function () {
+                    document.getElementById("about").style.display = "block";
                 },
-                hideAbout: function(){
-                    document.getElementById("about").style.display="none";
+                hideAbout: function () {
+                    document.getElementById("about").style.display = "none";
                 },
                 // 阻止事件冒泡
-                stopBubble: function(e) { 
-                    if (e && e.stopPropagation) {//非IE浏览器 
-                　　    e.stopPropagation(); 
-                    } 
-                    else {//IE浏览器 
-                        window.event.cancelBubble = true; 
-                    } 
-                } 
+                stopBubble: function (e) {
+                    if (e && e.stopPropagation) { //非IE浏览器 
+                        e.stopPropagation();
+                    } else { //IE浏览器 
+                        window.event.cancelBubble = true;
+                    }
+                }
             }
         })
