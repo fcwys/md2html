@@ -14,7 +14,7 @@
         var vm = new Vue({
             el: '#app',
             data: {
-                title: "Markdown解析",
+                title: "",
                 htmlText: "",
                 load: false,
                 hide: "hide",
@@ -23,6 +23,7 @@
             mounted: function () {
                 var _this = this;
                 var url = "./README.md";
+                var mdName = "Markdown解析";
                 if (getUrl("url")) {
                     url = getUrl("url");
                     //取url文件名
@@ -41,6 +42,7 @@
                         _this.load = true;
                         _this.title = mdName;
                         _this.htmlText = html;
+                        document.title = mdName;
                         //代码高亮渲染
                         hljs.initHighlightingOnLoad();
                     })
