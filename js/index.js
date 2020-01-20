@@ -14,11 +14,11 @@
         var vm = new Vue({
             el: '#app',
             data: {
-                title: "",          //页面标题
-                htmlText: "",       //解析的HTML
-                load: true,        //显示/隐藏Loading动画    
-                loadtip: "加载中...",      //Load提示文字
-                about: false        //显示/隐藏关于信息
+                title: "", //页面标题
+                htmlText: "", //解析的HTML
+                load: true, //显示/隐藏Loading动画    
+                loadtip: "加载中...", //Load提示文字
+                about: false //显示/隐藏关于信息
             },
             mounted: function () {
                 var _this = this;
@@ -43,16 +43,19 @@
                         _this.title = mdName;
                         _this.htmlText = html;
                         document.title = mdName;
-                        //代码高亮渲染
-                        hljs.initHighlightingOnLoad();
                     })
                     .catch(function (error) {
                         // 请求失败处理
-                        console.log("请求失败");
+                        _this.title = mdName;
+                        console.error("数据请求失败");
                         setTimeout(() => {
-                            _this.loadtip = "加载失败,请检查参数是否正确并重试";
-                        }, 1000);
+                            _this.loadtip = "加载失败，请检查参数是否正确并重试";
+                        }, 500);
                     });
+            },
+            updated: function () {
+                //代码高亮渲染
+                hljs.initHighlighting();
             },
             methods: {
                 // 阻止事件冒泡

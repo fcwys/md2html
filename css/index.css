@@ -8,12 +8,19 @@ body {
 
 code {
     border-radius: 3px;
+    overflow-x: auto;
+    padding: 2px 5px;
+    background: #f6f6f6;
+    color: #1f1f1f;
+    border-style: solid;
+    border-width: thin;
+    border-color: #e8e8e8;
 }
 
 .header {
-    height: 45px;
+    height: 40px;
     width: 100%;
-    line-height: 45px;
+    line-height: 40px;
     color: #f5f5f5;
     background-color: #1E93A6;
     text-align: center;
