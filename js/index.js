@@ -28,6 +28,8 @@
                 // 是否在正文的文章标题中创建锚点
                 isGenerateHeadingAnchor: true
             });
+            //置空方法以使该方法只能调用一次
+            navTree = function(){};
         }
 
         var vm = new Vue({
@@ -75,6 +77,7 @@
             updated: function () {
                 //代码高亮渲染
                 hljs.initHighlighting();
+                //目录树渲染
                 navTree();
             },
             methods: {
