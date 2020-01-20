@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+code {
+    border-radius: 3px;
+}
+
 .header {
     height: 45px;
     width: 100%;
@@ -96,13 +100,15 @@ body {
 }
 
 #toTop img,
-#toBottom img,#aboutBtn img {
+#toBottom img,
+#aboutBtn img {
     width: 30px;
     height: 30px;
 }
 
 #toTop:hover,
-#toBottom:hover,#aboutBtn:hover {
+#toBottom:hover,
+#aboutBtn:hover {
     box-shadow: 0 0px 10px 5px #e8e8e8;
     border-radius: 5px;
 }
@@ -111,13 +117,8 @@ body {
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    display: none;
-    transition: all 0.5s;
-    -moz-transition: all 0.5s;	/* Firefox 4 */
-    -webkit-transition: all 0.5s;	/* Safari 和 Chrome */
-    -o-transition: all 0.5s;	/* Opera */
 }
 
 .aboutInfo {
@@ -137,20 +138,22 @@ body {
     margin: 0;
     line-height: 40px;
 }
-.aboutInfo .aboutContent{
+
+.aboutInfo .aboutContent {
     padding: 15px;
     overflow-x: hidden;
     overflow-y: scroll;
     max-height: 40%;
 }
 
-.aboutInfo .aboutContent span{
+.aboutInfo .aboutContent span {
     border-radius: 3px;
-    background-color:#222;
+    background-color: #222;
     color: #fff;
     padding: 0 3px;
     line-height: 30px;
 }
+
 .load {
     text-align: center;
     padding: 100px 0;
@@ -167,22 +170,28 @@ body {
     margin: 0;
 }
 
-.hide {
-    display: none !important;
+/* 过渡动画 */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
 }
 
-.show {
-    display: block !important;
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
 }
+
 
 @media only screen and (max-width: 768px) {
     .lei-md {
         padding: 0 !important;
     }
+
     .aboutInfo {
         width: 90%;
     }
-    .aboutInfo .aboutContent{
+
+    .aboutInfo .aboutContent {
         max-height: 60%;
     }
 }

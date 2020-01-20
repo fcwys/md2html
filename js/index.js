@@ -14,11 +14,11 @@
         var vm = new Vue({
             el: '#app',
             data: {
-                title: "",
-                htmlText: "",
-                load: false,
-                hide: "hide",
-                show: "show"
+                title: "",          //页面标题
+                htmlText: "",       //解析的HTML
+                load: true,        //显示/隐藏Loading动画    
+                loadtip: "加载中...",      //Load提示文字
+                about: false        //显示/隐藏关于信息
             },
             mounted: function () {
                 var _this = this;
@@ -39,7 +39,7 @@
                         // MD解析为HTML
                         var parser = new HyperDown,
                             html = parser.makeHtml(response.data);
-                        _this.load = true;
+                        _this.load = false;
                         _this.title = mdName;
                         _this.htmlText = html;
                         document.title = mdName;
@@ -49,16 +49,12 @@
                     .catch(function (error) {
                         // 请求失败处理
                         console.log("请求失败");
+                        setTimeout(() => {
+                            _this.loadtip = "加载失败,请检查参数是否正确并重试";
+                        }, 1000);
                     });
             },
             methods: {
-                //显示隐藏关于信息
-                showAbout: function () {
-                    document.getElementById("about").style.display = "block";
-                },
-                hideAbout: function () {
-                    document.getElementById("about").style.display = "none";
-                },
                 // 阻止事件冒泡
                 stopBubble: function (e) {
                     if (e && e.stopPropagation) { //非IE浏览器 
