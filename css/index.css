@@ -27,6 +27,8 @@ code {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    position: absolute;
+    z-index: 2000;
 }
 
 .content {
@@ -39,7 +41,7 @@ code {
     padding: 30px;
     background-color: #fff;
     margin-bottom: 0 !important;
-    box-shadow: 0 15px 12px 8px #e8e8e8;
+    box-shadow: 0 12px 15px #ddd;
 }
 
 
@@ -62,21 +64,24 @@ code {
     display: block;
     width: 30px;
     height: 30px;
+    padding: 5px;
     position: fixed;
-    bottom: 180px;
+    bottom: 200px;
     right: 20px;
     z-index: 9999;
+    /* background-color: #fff; */
 }
 
 #toBottom {
     display: block;
     width: 30px;
     height: 30px;
+    padding: 5px;
     position: fixed;
     bottom: 120px;
     right: 20px;
-    transform: rotate(180deg);
     z-index: 9999;
+    transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     /* IE 9 */
     -moz-transform: rotate(180deg);
@@ -85,25 +90,19 @@ code {
     /* Safari 和 Chrome */
     -o-transform: rotate(180deg);
     /* Opera */
+    /* background-color: #fff; */
 }
 
 #aboutBtn {
     display: block;
     width: 30px;
     height: 30px;
+    padding: 5px;
     position: fixed;
-    bottom: 150px;
+    bottom: 160px;
     right: 20px;
-    transform: rotate(180deg);
     z-index: 9999;
-    -ms-transform: rotate(180deg);
-    /* IE 9 */
-    -moz-transform: rotate(180deg);
-    /* Firefox */
-    -webkit-transform: rotate(180deg);
-    /* Safari 和 Chrome */
-    -o-transform: rotate(180deg);
-    /* Opera */
+    /* background-color: #fff; */
 }
 
 #toTop img,
@@ -116,8 +115,9 @@ code {
 #toTop:hover,
 #toBottom:hover,
 #aboutBtn:hover {
-    box-shadow: 0 0px 10px 5px #e8e8e8;
-    border-radius: 5px;
+    background-color: #f1f1f1;
+    /* box-shadow: 0 0px 10px 5px #e8e8e8; */
+    border-radius: 50px; 
 }
 
 #about {
@@ -196,6 +196,7 @@ code {
 
     .aboutInfo {
         width: 90%;
+        margin: 25% auto;
     }
 
     .aboutInfo .aboutContent {

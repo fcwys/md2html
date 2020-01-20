@@ -11,6 +11,25 @@
             return (false);
         }
 
+        // 目录导航
+        function navTree() {
+            // 创建 Outline 实例
+            let navigation = new AutocJs({
+                // 文章正文 DOM 节点的 ID 选择器
+                article: '#mainContent',
+                // 要收集的标题选择器
+                selector: 'h1,h2,h3,h4,h5,h6',
+                // 是否生成文章导读导航
+                isGenerateOutline: true,
+                // 是否在文章导读导航中显示段落章节编号
+                isGenerateOutlineChapterCode: false,
+                // 是否在正文的文章标题中显示段落章节编号
+                isGenerateHeadingChapterCode: false,
+                // 是否在正文的文章标题中创建锚点
+                isGenerateHeadingAnchor: true
+            });
+        }
+
         var vm = new Vue({
             el: '#app',
             data: {
@@ -56,6 +75,7 @@
             updated: function () {
                 //代码高亮渲染
                 hljs.initHighlighting();
+                navTree();
             },
             methods: {
                 // 阻止事件冒泡
