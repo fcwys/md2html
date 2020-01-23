@@ -267,7 +267,7 @@ var AutocJs = function () {
                 if (_this.get('isGenerateHeadingChapterCode')) {
                     code = dom.createElement('span', {
                         className: 'outline-heading-code'
-                    }, [chapters[i].code]);
+                    }, [chapters[i].code + '、']);
 
                     el.insertBefore(code, el.firstChild);
                 }
@@ -335,9 +335,7 @@ var AutocJs = function () {
             elements.wrap = dom.createElement('div', {
                 className: 'outline-outside'
             }, [elements.modal, elements.overlay]);
-
             document.body.appendChild(elements.wrap);
-
             return this;
         }
     }, {
@@ -473,17 +471,8 @@ var AutocJs = function () {
         value: function remove() {
             var elements = this.getElements();
             var wrap = elements.wrap;
-
             this.removeListeners();
-
-            if (this.get('isGenerateHeadingAnchor')) {
-                elements.anchors.forEach(function (anchor) {
-                    anchor.parentNode.removeChild(anchor);
-                });
-            }
-
             wrap.parentNode.removeChild(wrap);
-
             return this;
         }
     }, {
@@ -584,8 +573,6 @@ AutocJs.defaults = {
     isGenerateOutlineChapterCode: false,
     // 是否在正文的文章标题中显示段落章节编号
     isGenerateHeadingChapterCode: false,
-    // 是否在正文的文章标题中创建锚点
-    isGenerateHeadingAnchor: true
 
     /**
      * 常用的静态方法集

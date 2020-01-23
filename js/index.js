@@ -25,8 +25,6 @@
                 isGenerateOutlineChapterCode: false,
                 // 是否在正文的文章标题中显示段落章节编号
                 isGenerateHeadingChapterCode: false,
-                // 是否在正文的文章标题中创建锚点
-                isGenerateHeadingAnchor: true
             });
             //置空方法以使该方法只能调用一次
             navTree = function(){};
