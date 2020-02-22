@@ -135,66 +135,19 @@
 }
 .lei-md img {
   max-width: 100%;
-  vertical-align: middle;
-  border-style: none;
-  border-radius: 2px 2px;
-  display: inline-block;
-  opacity: 1;
-  text-align: left;
-  transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 2px;
+  display: block;
   -webkit-user-select: all;
   -moz-user-select: all;
   -ms-user-select: all;
   user-select: all;
+  margin: 10px auto;
+  margin-bottom: 20px;
 }
-/** .lei-md pre {
-  border-radius: 0;
-  border-width: 0;
-  background: #f9f9f9;
-  font-family: inherit;
-  font-size: inherit;
-  margin: 0;
-  white-space: pre;
-  word-wrap: normal;
-  line-height: inherit;
-  color: inherit;
-  z-index: 2;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-font-variant-ligatures: contextual;
-  font-variant-ligatures: contextual;
-  position: relative;
-  padding: 16px;
-  overflow: visible;
-  border: 1px solid #e8e8e8;
-  border-radius: 2px 2px;
-  text-indent: 0;
-  overflow-y: scroll;
-  overflow-x: visible;
+.lei-md h1:hover::after,h2:hover::after {
+  content: " ⌘";
+  color: #CCCCCC;
 }
-.lei-md code {
-  font-family: monospace;
-  font-size: inherit;
-  background-color: rgba(0, 0, 0, 0.06);
-  padding: 0 2px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 2px 2px;
-  line-height: inherit;
-  word-wrap: break-word;
-  text-indent: 0;
-  margin-left: 0.2em;
-  margin-right: 0.2em;
-}
-.lei-md pre code {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
-  font-size: 13px;
-  line-height: 21px;
-  color: #595959;
-  direction: ltr;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-} **/
 
 .lei-md table {
   position: relative;

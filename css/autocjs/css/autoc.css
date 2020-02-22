@@ -73,6 +73,9 @@
     text-align: center;
     color: #1E93A6;
 }
+.outline-outside-title:hover::after {
+    content: ""
+}
 
 .outline-outside-body {
     -webkit-box-sizing: border-box;
