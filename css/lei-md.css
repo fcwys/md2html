@@ -61,7 +61,7 @@
   line-height: 32px;
   padding: 7px 0;
   margin: 10px 0;
-  border-bottom: double #CCCCCC 2px;
+  border-bottom: solid #CCCCCC 2px;
 }
 .lei-md h3 {
   font-size: 20px;
