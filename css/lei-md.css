@@ -52,19 +52,22 @@
 .lei-md h1 {
   font-size: 28px;
   line-height: 36px;
-  padding: 7px 0;
+  padding: 6px 0;
+  margin: 12px 0;
+  border-bottom: double #CCCCCC 3px;
 }
 .lei-md h2 {
   font-size: 24px;
   line-height: 32px;
   padding: 7px 0;
-  margin-top: 10px;
-  margin-bottom: 5px;
+  margin: 10px 0;
+  border-bottom: double #CCCCCC 2px;
 }
 .lei-md h3 {
   font-size: 20px;
   line-height: 28px;
   padding: 7px 0;
+  margin-top: 8px;
 }
 .lei-md h4 {
   font-size: 16px;
