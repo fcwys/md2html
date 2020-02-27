@@ -27,7 +27,7 @@
                 isGenerateHeadingChapterCode: false,
             });
             //置空方法以使该方法只能调用一次
-            navTree = function(){};
+            navTree = function () {};
         }
 
         var vm = new Vue({
@@ -78,14 +78,5 @@
                 //目录树渲染
                 navTree();
             },
-            methods: {
-                // 阻止事件冒泡
-                stopBubble: function (e) {
-                    if (e && e.stopPropagation) { //非IE浏览器 
-                        e.stopPropagation();
-                    } else { //IE浏览器 
-                        window.event.cancelBubble = true;
-                    }
-                }
-            }
+            methods: {}
         })

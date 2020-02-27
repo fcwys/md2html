@@ -21,8 +21,8 @@
     <div id="app">
         <!-- 使用说明 -->
         <transition name="fade">
-            <div id="about" @click="about = !about" v-if="about">
-                <div class="aboutInfo" @click="stopBubble(this.id)">
+            <div id="about" @click.self="about = !about" v-if="about">
+                <div class="aboutInfo">
                     <h3>Markdown解析 - 使用说明</h3>
                     <div class="aboutContent">
                         在地址后传入参数
